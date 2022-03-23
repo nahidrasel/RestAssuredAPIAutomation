@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\nahidpractice\RestAssuredAPIAutomation"/>
 			<item value="C:\Users\nahid.mahmud\eclipse-workspace\API_testing"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -26,6 +27,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="DemoTest"/>
 			<item value="DemoTest.DemoTest"/>
 		</list>
 		<list key="groupId">
