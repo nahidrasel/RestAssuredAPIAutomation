@@ -14,15 +14,17 @@ public class TC001_Get_Request {
 		//Specify Base URI
 		RestAssured.baseURI="http://reqres.in";
 		
+		
 		//Request object
 		RequestSpecification httprequest=RestAssured.given();
+		
 		
 		//Response object
 		Response response= httprequest.request(Method.GET,"/api/users/");
 		
 		//print response in console window
 		String responseBody=response.getBody().asString();
-		System.out.println("Response body is:"+responseBody);
+		System.out.println("Response body l is:"+responseBody);
 		
 		//Status code
 		int statusCode= response.getStatusCode();
