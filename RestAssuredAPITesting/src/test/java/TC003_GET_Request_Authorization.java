@@ -32,7 +32,7 @@ public class TC003_GET_Request_Authorization {
 				
 		//print response in console window
 		String responseBody=response.getBody().asString();
-		System.out.println("Response body is:"+responseBody);
+		System.out.println("Response Body is:"+responseBody);
 		
 		//Status code
 		int statusCode= response.getStatusCode();
