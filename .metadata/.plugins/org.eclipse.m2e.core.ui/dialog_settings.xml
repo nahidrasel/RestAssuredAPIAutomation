@@ -26,13 +26,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="RestAssuredAPITesting.RestAssuredAPITesting"/>
+			<item value="DemoTest.DemoTest"/>
 		</list>
 		<list key="groupId">
-			<item value="RestAssuredAPITesting"/>
+			<item value="DemoTest"/>
 		</list>
 		<list key="artifactId">
-			<item value="RestAssuredAPITesting"/>
+			<item value="DemoTest"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
