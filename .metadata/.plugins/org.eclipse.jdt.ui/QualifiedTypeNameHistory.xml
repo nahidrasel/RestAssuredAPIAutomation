@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="io.restassured.specification.RequestSpecification"/>
     <fullyQualifiedTypeName name="io.restassured.http.Method"/>
-    <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="io.restassured.authentication.PreemptiveBasicAuthScheme"/>
     <fullyQualifiedTypeName name="io.restassured.response.Response"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
@@ -12,4 +11,8 @@
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+    <fullyQualifiedTypeName name="org.hamcrest.Matcher"/>
+    <fullyQualifiedTypeName name="files.payload"/>
+    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
 </qualifiedTypeNameHistroy>
