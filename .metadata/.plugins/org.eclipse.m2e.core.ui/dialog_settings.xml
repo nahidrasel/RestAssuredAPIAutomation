@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\nahid.mahmud\eclipse-workspace\demoproject"/>
+			<item value="C:\Users\nahid.mahmud\eclipse-workspace\RestAssuredAPITesting"/>
+			<item value="C:\nahidpractice\REPOS"/>
 			<item value="C:\nahidpractice\RestAssuredAPIAutomation"/>
 			<item value="C:\Users\nahid.mahmud\eclipse-workspace\API_testing"/>
 		</list>
@@ -27,14 +30,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="DemoTest"/>
-			<item value="DemoTest.DemoTest"/>
+			<item value="demo.demo"/>
 		</list>
 		<list key="groupId">
-			<item value="DemoTest"/>
+			<item value="demo"/>
 		</list>
 		<list key="artifactId">
-			<item value="DemoTest"/>
+			<item value="demo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -88,5 +90,18 @@
 		<item key="height" value="531"/>
 		<item key="x" value="304"/>
 		<item key="y" value="62"/>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="demoproject"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="demoproject"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
 	</section>
 </section>
