@@ -4,24 +4,30 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import org.testng.Assert;
 
 import files.ReUsableMethods;
 import files.payload;
 public class Basics {
 	
-	public static void main(String[] args) {	
+	public static void main(String[] args) throws IOException {	
 	//validate if the api is working as expected
 	//add place-> Update Place with New Address-> Get Place to validate if New address is present is response
 	//given = all input details
 	//when = submit the api
 	//then= validate the response
+		//content of the file to String-> Content of file can covert into Byte -> Byte data to String
 		
 	RestAssured.baseURI="https://rahulshettyacademy.com";
 		
 	String response= given().log().all().queryParams("key","qaclick123")
 	.header("Content-Type","application/json")
-	.body(payload.AddPlace()) .when().post("maps/api/place/add/json")
+	//.body(payload.AddPlace()) [can be use static way ]
+	.body(new String(Files.readAllBytes(Paths.get("C:\\Users\\nahid.mahmud\\Downloads\\addPlace.json")))).when().post("maps/api/place/add/json")
 	.then().assertThat().statusCode(200).body("scope",equalTo("APP"))
 	.header("server", "Apache/2.4.18 (Ubuntu)").extract().response().asString();
 	
