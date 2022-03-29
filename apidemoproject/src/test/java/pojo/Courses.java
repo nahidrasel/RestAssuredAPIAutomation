@@ -5,9 +5,6 @@ import java.util.List;
 public class Courses {
 
 	private List<WebAutomation> webAutomation;
-	private List<Api> api;
-	private List<Mobile> mobile;
-	
 	public List<WebAutomation> getWebAutomation() {
 		return webAutomation;
 	}
@@ -26,6 +23,10 @@ public class Courses {
 	public void setMobile(List<Mobile> mobile) {
 		this.mobile = mobile;
 	}
+	private List<Api> api;
+	private List<Mobile> mobile;
+	
+
 	
 	
 }

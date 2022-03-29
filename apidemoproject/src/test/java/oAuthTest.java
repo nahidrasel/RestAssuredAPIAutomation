@@ -1,7 +1,12 @@
 
 import static io.restassured.RestAssured.*;
 
+import java.util.List;
+
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
+import pojo.Api;
+import pojo.GetCourse;
 public class oAuthTest {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -32,7 +37,7 @@ public class oAuthTest {
 		//this is the url >> https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWgu9ojUfr8K1VECCkoRE5LiDXrRN4nrVd59rp7HvSEn1LIAL94zfeDoau5hpZvOwQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
 		
 		
-		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWgu9ojUfr8K1VECCkoRE5LiDXrRN4nrVd59rp7HvSEn1LIAL94zfeDoau5hpZvOwQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
+		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWiy47XF-PR2ZHkGM04Y8r4XejeMqf1Dqkgltu5H8gXB7JAFyRzDy0plgg3hSf1xNQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
 		String partialCode= url.split("code=")[1];
 		String code = partialCode.split("&scope")[0];
 		System.out.println(code);
@@ -52,12 +57,26 @@ public class oAuthTest {
 		JsonPath js= new JsonPath(accessTokenResponse);
 		String accessToken= js.getString("access_token");
 		
-		String response= given().queryParam("access_token",accessToken).
-		when().log().all()
-		.get("https://rahulshettyacademy.com/getCourse.php").asString();
 		
-		System.out.println(response);
+		GetCourse gc= given().queryParam("access_token",accessToken).expect().defaultParser(Parser.JSON)
+		.when()
+		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
 		
+		System.out.println(gc.getLinkedIn());
+		System.out.println(gc.getInstructor());
+		
+		System.out.println(gc.getCourses().getApi().get(1).getCourseTitle());
+		
+		List<Api> apiCourses=gc.getCourses().getApi();
+		for(int i= 0; i<apiCourses.size();i++) {
+			
+			if(apiCourses.get(i).getCourseTitle().equalsIgnoreCase("SoapUI Webservices testing"))
+			{
+				System.out.println(apiCourses.get(i).getPrice());
+				System.out.println(gc.getCourses().getMobile().get(1).getCourseTitle());
+			}
+		}
+		//System.out.println(response);
 	}
 
 }
