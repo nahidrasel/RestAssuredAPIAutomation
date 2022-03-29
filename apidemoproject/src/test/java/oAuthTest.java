@@ -1,4 +1,5 @@
 
+
 import static io.restassured.RestAssured.*;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class oAuthTest {
 		// TODO Auto-generated method stub
 		String[] courseTitles= {"Selenium Webdriver Java","Cypress","Protractor"};
 		
-		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWh56im0_Hi7Q-yHYLiNRpius47PXbC-et0MVrRLG4i9TL0SDjWyF2gMhJ94SX_YQg&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none";
+		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWizHcKdie3GY8zuKEZ5JgS8-KRwFFZeDS1M1hoSuwIlVxIcpCTRDLT8zVHp-p6yag&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
 		String partialCode= url.split("code=")[1];
 		String code = partialCode.split("&scope")[0];
 		System.out.println(code);

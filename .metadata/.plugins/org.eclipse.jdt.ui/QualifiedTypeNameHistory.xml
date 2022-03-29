@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="io.restassured.specification.RequestSpecification"/>
     <fullyQualifiedTypeName name="io.restassured.http.Method"/>
     <fullyQualifiedTypeName name="io.restassured.authentication.PreemptiveBasicAuthScheme"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="junit.framework.Assert"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -11,12 +10,22 @@
     <fullyQualifiedTypeName name="org.hamcrest.Matcher"/>
     <fullyQualifiedTypeName name="files.ReUsableMethods"/>
     <fullyQualifiedTypeName name="files.payload"/>
-    <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
-    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
     <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
     <fullyQualifiedTypeName name="io.restassured.response.Response"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
+    <fullyQualifiedTypeName name="pojo.GetCourse"/>
+    <fullyQualifiedTypeName name="io.restassured.parsing.Parser"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="pojo.Api"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="pojo.WebAutomation"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
 </qualifiedTypeNameHistroy>

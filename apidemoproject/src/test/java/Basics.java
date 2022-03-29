@@ -1,3 +1,4 @@
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
@@ -11,7 +12,6 @@ import java.nio.file.Paths;
 import org.testng.Assert;
 
 import files.ReUsableMethods;
-import files.payload;
 public class Basics {
 	
 	public static void main(String[] args) throws IOException {	
