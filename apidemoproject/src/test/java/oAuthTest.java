@@ -1,7 +1,11 @@
 
 import static io.restassured.RestAssured.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import org.testng.Assert;
 
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
@@ -11,33 +15,9 @@ public class oAuthTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		String[] courseTitles= {"Selenium Webdriver Java","Cypress","Protractor"};
 		
-		/* Google Revoke this automation with Gmail
-		 import org.openqa.selenium.By;
-		import org.openqa.selenium.Keys;
-		import org.openqa.selenium.WebDriver;
-		import org.openqa.selenium.chrome.ChromeDriver;
-		
-		System.setProperty("webdriver.chrome.driver", "C:/Users/nahid.mahmud/Downloads/chromedriver.exe");
-		
-		WebDriver driver= new ChromeDriver();
-		driver.get("https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php");
-		driver.findElement(By.cssSelector("input[type='email']")).sendKeys("nahid.mahmud.qa");
-		driver.findElement(By.cssSelector("input[type='email']")).sendKeys(Keys.ENTER);
-		Thread.sleep(4000);
-		
-		driver.findElement(By.cssSelector("input[type='password']")).sendKeys(Password);
-		driver.findElement(By.cssSelector("input[type='password']")).sendKeys(Keys.ENTER);
-		String url= driver.getCurrentUrl();
-		*/
-		
-        //Go to this url >>https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php
-	    //type your email and password , then just copy the url you get after;
-		
-		//this is the url >> https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWgu9ojUfr8K1VECCkoRE5LiDXrRN4nrVd59rp7HvSEn1LIAL94zfeDoau5hpZvOwQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
-		
-		
-		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWiy47XF-PR2ZHkGM04Y8r4XejeMqf1Dqkgltu5H8gXB7JAFyRzDy0plgg3hSf1xNQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
+		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWh56im0_Hi7Q-yHYLiNRpius47PXbC-et0MVrRLG4i9TL0SDjWyF2gMhJ94SX_YQg&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none";
 		String partialCode= url.split("code=")[1];
 		String code = partialCode.split("&scope")[0];
 		System.out.println(code);
@@ -73,10 +53,53 @@ public class oAuthTest {
 			if(apiCourses.get(i).getCourseTitle().equalsIgnoreCase("SoapUI Webservices testing"))
 			{
 				System.out.println(apiCourses.get(i).getPrice());
-				System.out.println(gc.getCourses().getMobile().get(1).getCourseTitle());
 			}
 		}
-		//System.out.println(response);
+		
+		//Get the course names of WebAutomation
+		ArrayList<String> a = new ArrayList<String>();
+		
+		List<pojo.WebAutomation> w= gc.getCourses().getWebAutomation();
+		
+		for (int j=0; j<w.size();j++) 
+		{
+			a.add(w.get(j).getCourseTitle());	
+		}
+		
+		List<String> expectedList = Arrays.asList(courseTitles);
+		Assert.assertTrue(a.equals(expectedList));
+		
+		//to check if it's checking the assertions
+		System.out.println("All tests Pass");
+
+		
 	}
 
 }
+
+
+/* Google Revoke this automation with Gmail
+ import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+System.setProperty("webdriver.chrome.driver", "C:/Users/nahid.mahmud/Downloads/chromedriver.exe");
+
+WebDriver driver= new ChromeDriver();
+driver.get("https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php");
+driver.findElement(By.cssSelector("input[type='email']")).sendKeys("nahid.mahmud.qa");
+driver.findElement(By.cssSelector("input[type='email']")).sendKeys(Keys.ENTER);
+Thread.sleep(4000);
+
+driver.findElement(By.cssSelector("input[type='password']")).sendKeys(Password);
+driver.findElement(By.cssSelector("input[type='password']")).sendKeys(Keys.ENTER);
+String url= driver.getCurrentUrl();
+*/
+
+//Go to this url >>https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php
+//type your email and password , then just copy the url you get after;
+
+//this is the url >> https://rahulshettyacademy.com/getCourse.php?code=4%2F0AX4XfWgu9ojUfr8K1VECCkoRE5LiDXrRN4nrVd59rp7HvSEn1LIAL94zfeDoau5hpZvOwQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none";
+
+
