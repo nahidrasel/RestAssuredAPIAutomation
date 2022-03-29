@@ -1,0 +1,34 @@
+courses:{
+
+WebAutomation: [{
+		"courseTitle":"fewre",
+		"price":"wer"
+		}]
+
+API: [{
+		"courseTitle":"fewre",
+		"price":"wer"
+		}]
+
+Mobile:[{
+		"courseTitle":"fewre",
+		"price":"wer"
+		}]
+}
+
+//real json
+
+{ "instructor": "RahulShetty", 
+"url": "rahulshettycademy.com", 
+"services": "projectSupport", 
+"expertise": "Automation", 
+courses: { 
+
+WebAutomation: [ {"courseTitle": "Selenium Webdriver Java", 
+		"price": "50" 
+		}]
+API:[{
+		"courseTitle": "Selenium Webdriver Java", 
+		"price": "50" 
+		}]
+}
