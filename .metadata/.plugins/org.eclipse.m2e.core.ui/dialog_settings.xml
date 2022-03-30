@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\nahid.mahmud\Mavenjava"/>
 			<item value="C:\Users\nahid.mahmud\eclipse-workspace\demoproject"/>
 			<item value="C:\Users\nahid.mahmud\eclipse-workspace\RestAssuredAPITesting"/>
 			<item value="C:\nahidpractice\REPOS"/>
@@ -30,12 +31,18 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="Cucumber.Automation"/>
+			<item value="Cukesproj.Cukesproj"/>
 			<item value="demo.demo"/>
 		</list>
 		<list key="groupId">
+			<item value="Cucumber"/>
+			<item value="Cukesproj"/>
 			<item value="demo"/>
 		</list>
 		<list key="artifactId">
+			<item value="Automation"/>
+			<item value="Cukesproj"/>
 			<item value="demo"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -102,6 +109,20 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\nahid.mahmud\Mavenjava"/>
+			<item value="C:\Users\nahid.mahmud\eclipse-workspace\Practise"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 	</section>
 </section>
