@@ -10,7 +10,7 @@ public class AddPlace {
 	private String address;
 	private String website;
 	private String language;
-	private String location;
+	private Location location;
 	private List<String> types;
 	
 	public int getAccuracy() {
@@ -49,10 +49,10 @@ public class AddPlace {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-	public String getLocation() {
+	public Location getLocation() {
 		return location;
 	}
-	public void setLocation(String location) {
+	public void setLocation(Location location) {
 		this.location = location;
 	}
 	public List<String> getTypes() {
