@@ -31,15 +31,22 @@ public class StepDefination extends Utils {
 		res = given().spec(requestSpecification())
 		.body(data.addPlacePayLoad(name,language,address));
 	}
-	@When("user calls {string} with Post http request")
-	public void user_calls_with_Post_http_request(String resource) {
+	
+	@When("user calls {string} with {string} http request")
+	public void user_calls_with_http_request(String resource,String method) {
 		
 		APIResources resourceAPI= APIResources.valueOf(resource);
-		System.out.println(resourceAPI.getResouces());
+		System.out.println(resourceAPI.getResource());
+		
 		resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		response = res.when().post("maps/api/place/add/json")
-				.then().spec(resspec).extract().response();
+		
+		if(method.equalsIgnoreCase("POST"))
+		response = res.when().post(resourceAPI.getResource());
+		else if(method.equalsIgnoreCase("GET"))
+			response= res.when().get(resourceAPI.getResource());
 	}
+	
+	
 	@Then("the API call is success with status code {int}")
 	public void the_api_call_is_success_with_status_code(Integer int1) {
 	   assertEquals(response.getStatusCode(),200);
