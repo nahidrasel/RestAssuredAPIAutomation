@@ -31,16 +31,19 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="bdd.APIFramework"/>
 			<item value="Cucumber.Automation"/>
 			<item value="Cukesproj.Cukesproj"/>
 			<item value="demo.demo"/>
 		</list>
 		<list key="groupId">
+			<item value="bdd"/>
 			<item value="Cucumber"/>
 			<item value="Cukesproj"/>
 			<item value="demo"/>
 		</list>
 		<list key="artifactId">
+			<item value="APIFramework"/>
 			<item value="Automation"/>
 			<item value="Cukesproj"/>
 			<item value="demo"/>

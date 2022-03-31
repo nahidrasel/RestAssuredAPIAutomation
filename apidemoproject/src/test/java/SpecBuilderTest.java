@@ -34,8 +34,10 @@ public class SpecBuilderTest {
 		RestAssured.baseURI="https://rahulshettyacademy.com";
 		Response res= given().log().all().queryParam("key", "qaclick123")
 		.body(p)
+		
 		.when().post("maps/api/place/add/json")
 		.then().assertThat().statusCode(200).extract().response();
+		
 		String responseString= res.asString();
 		System.out.println(responseString);
 
