@@ -10,4 +10,3 @@ import io.cucumber.junit.CucumberOptions;
 public class TestRunner {
 //,tags={"@DeletePlace"}
 }
-
