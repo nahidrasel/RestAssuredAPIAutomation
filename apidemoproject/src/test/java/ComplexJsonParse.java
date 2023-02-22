@@ -20,7 +20,6 @@ public class ComplexJsonParse {
 	System.out.println(titleFirstCourse);
 	
 	//print all courses title and their respective prices
-	
 	for(int i=0;i<count;i++) {
 		
 		String courseTitles= js.get("courses["+i+"].title");
@@ -29,7 +28,6 @@ public class ComplexJsonParse {
 		System.out.println(courseTitles);
 	 }
 	  //Print no of copies sold by RPA Course
-	  
 	 System.out.println("Print no of copies sold by RPA Course");
 	 
 	 for(int i=0;i<count;i++)
@@ -41,10 +39,6 @@ public class ComplexJsonParse {
 			  System.out.println(copies);
 			  break;
 		  }
-			  
 	 }
-	 
-	 
-		}
-
-	}
+    }
+}
